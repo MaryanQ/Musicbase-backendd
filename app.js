@@ -18,9 +18,9 @@ dotenv.config();
 app.use(async (req, res, next) => {
   try {
     // Fetch data here from your database
-    const artists = await Artist.find();
-    const tracks = await Track.find();
-    const albums = await Album.find();
+    const artists = await artists.find();
+    const tracks = await tracks.find();
+    const albums = await albums.find();
 
     // Set fetched data to be available globally in the app
     // For example:
