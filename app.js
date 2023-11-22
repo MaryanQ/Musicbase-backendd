@@ -2,9 +2,9 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 // Update import paths in app.js
-import artistsRouter from "./backend/Routes/artists.js";
-import tracksRouter from "./backend/Routes/tracks.js";
-import albumsRouter from "./backend/Routes/albums.js";
+import artistsRouter from "./Routes/artists.js";
+import tracksRouter from "./Routes/tracks.js";
+import albumsRouter from "./Routes/albums.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
