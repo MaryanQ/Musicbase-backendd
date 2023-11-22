@@ -22,5 +22,6 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`App running on http://localhost:${port}`);
+  console.log(`
+musicbaseee.azurewebsites.net`);
 });
