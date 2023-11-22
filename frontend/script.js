@@ -1,35 +1,35 @@
 "use strict";
 
-let allArtists, allAlbums, allTracks;
+let artists, allAlbums, allTracks;
 
 window.addEventListener("load", start);
 
 async function start() {
-  await GetArtists();
+  await Getartists();
   await GetAlbums();
   await GetTracks();
 }
 
-async function GetArtists() {
-  const response = await fetch(`https://musicbasee.azurewebsites.net/artists`);
-  allArtists = await response.json();
-  displayArtists(allArtists);
+async function Getartists() {
+  const response = await fetch(`http://localhost:3000/artists`);
+  artists = await response.json();
+  displayartists(artists);
 }
 
 async function GetAlbums() {
-  const response = await fetch(`https://musicbasee.azurewebsites.net/albums`);
+  const response = await fetch(`http://localhost:3000/albums`);
   allAlbums = await response.json();
   displayAlbums(allAlbums);
 }
 
 async function GetTracks() {
-  const response = await fetch(`https://musicbasee.azurewebsites.net/tracks`);
+  const response = await fetch(`http://localhost:3000/tracks`);
   allTracks = await response.json();
   displayTracks(allTracks);
 }
 
 // Function to display artists
-async function displayArtists(artists) {
+async function displayartists(artists) {
   const artistsContainer = document.querySelector("#artists-container");
   artistsContainer.innerHTML = "";
 
@@ -92,13 +92,13 @@ function search() {
     .querySelector("#searchInput")
     .value.toLowerCase();
 
-  if (allArtists) {
-    const filteredArtists = allArtists.filter((allArtists) =>
-      allArtists.name.toLowerCase().includes(searchInput)
+  if (artists) {
+    const filteredArtists = artists.filter((artists) =>
+      artists.name.toLowerCase().includes(searchInput)
     );
-    displayArtists(filteredArtists);
+    displayartists(filteredArtists);
   } else {
-    displayArtists([]);
+    displayartists([]);
   }
 
   if (allAlbums) {
@@ -112,7 +112,7 @@ function search() {
 
   if (allTracks) {
     const filteredTracks = allTracks.filter((allTracks) =>
-      allTracks.tracks.toLowerCase().includes(searchInput)
+      allTracks.title.toLowerCase().includes(searchInput)
     );
     displayTracks(filteredTracks);
   } else {
