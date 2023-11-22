@@ -15,6 +15,26 @@ app.use(express.json());
 app.use(cors());
 dotenv.config();
 
+app.use(async (req, res, next) => {
+  try {
+    // Fetch data here from your database
+    const artists = await Artist.find();
+    const tracks = await Track.find();
+    const albums = await Album.find();
+
+    // Set fetched data to be available globally in the app
+    // For example:
+    res.locals.artists = artists;
+    res.locals.tracks = tracks;
+    res.locals.albums = albums;
+    next();
+  } catch (error) {
+    // Handle errors if data fetching fails
+    console.error("Error fetching data:", error);
+    next(error);
+  }
+});
+
 app.use("/artists", artistsRouter);
 app.use("/tracks", tracksRouter);
 app.use("/albums", albumsRouter);
@@ -24,5 +44,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`https://musicbasee.azurewebsites.net/`);
 });
