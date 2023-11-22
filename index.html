@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATA</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="appName">MusicBase</h1>
+    </header>
+
+    <form id="searchform">
+      <div class="searchContainer">
+        <input
+          type="search"
+          placeholder="Search for music..."
+          id="searchInput"
+        />
+      </div>
+    </form>
+
+    <div id="container">
+      <h2 class="data">Artists</h2>
+      <section id="artists-container" class="grid-container"></section>
+
+      <h2 class="data">Albums</h2>
+      <table>
+        <thead>
+          <tr>
+            <th><h3>Artist</h3></th>
+            <th><h3>Album Name</h3></th>
+            <th><h3>Release date</h3></th>
+          </tr>
+        </thead>
+        <tbody id="albums-container"></tbody>
+      </table>
+
+      <h2 class="data">Tracks</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th><h3>Name</h3></th>
+            <th><h3>Tracks</h3></th>
+            <th><h3>Release date</h3></th>
+          </tr>
+        </thead>
+        <tbody id="tracks-container"></tbody>
+      </table>
+    </div>
+    <footer>
+      <p>by Naima, Mariam og Aisha</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
