@@ -23,5 +23,5 @@ app.get("/", (req, res) => {
 
 app.listen(port, () => {
   console.log(`
-musicbaseee.azurewebsites.net`);
+https://musicbaseee.azurewebsites.net/`);
 });
