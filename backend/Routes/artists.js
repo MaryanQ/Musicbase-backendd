@@ -1,6 +1,6 @@
 import { Router } from "express";
 import dbConfig from "../db-connect.js";
-import mysql from "mysql2";
+import mysql from "mysql2/index.js";
 import tracksRouter from "./tracks.js";
 
 const artistsRouter = Router();
