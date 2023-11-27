@@ -1,6 +1,6 @@
 import { Router } from "express";
 import dbConfig from "../db-connect.js";
-import mysql from "mysql2/index.js";
+import mysql from "mysql2";
 import { v4 as uuidv4 } from "uuid";
 const tracksRouter = Router();
 
