@@ -11,21 +11,24 @@ async function start() {
 }
 
 async function Getartists() {
-  const response = await fetch("http://localhost:3000/artists");
+  const response = await fetch(
+    "https://musicbasebackend.azurewebsites.net/artists"
+  );
   artists = await response.json();
   displayartists(artists);
 }
 
 async function GetAlbums() {
   const response = await fetch(`
-http://localhost:3000/albums`);
+
+https://musicbasebackend.azurewebsites.net/albums`);
   Albums = await response.json();
   displayAlbums(Albums);
 }
-
+//http://localhost:3000/
 async function GetTracks() {
   const response = await fetch(`
-http://localhost:3000/tracks`);
+https://musicbasebackend.azurewebsites.net/tracks`);
   Tracks = await response.json();
   displayTracks(Tracks);
 }

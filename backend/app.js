@@ -22,5 +22,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server kører på http://localhost:${port}`);
+  console.log(`Server kører på https://musicbasebackend.azurewebsites.net`);
 });
