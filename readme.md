@@ -30,7 +30,7 @@ MYSQL database hosted på Azure.
 Adgang til webapplikationen:
 
 Brugere kan tilgå applikationen via en webbrowser ved at besøge
-https://musicbaseapp.azurewebsites.net/
+https://musicbaseee.azurewebsites.net/
 
 Projektudviklere:
 Mariam Salad
