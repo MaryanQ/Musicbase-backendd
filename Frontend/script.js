@@ -1,6 +1,6 @@
 "use strict";
 
-let artists, allAlbums, allTracks;
+let artists, Albums, Tracks;
 
 window.addEventListener("load", start);
 
@@ -11,24 +11,23 @@ async function start() {
 }
 
 async function Getartists() {
-  const response = await fetch(`
-https://localhost:3000/artists`);
+  const response = await fetch("http://localhost:3000/artists");
   artists = await response.json();
   displayartists(artists);
 }
 
 async function GetAlbums() {
   const response = await fetch(`
-https://localhost:3000/albums`);
-  allAlbums = await response.json();
-  displayAlbums(allAlbums);
+http://localhost:3000/albums`);
+  Albums = await response.json();
+  displayAlbums(Albums);
 }
 
 async function GetTracks() {
   const response = await fetch(`
-https://localhost:3000/tracks`);
-  allTracks = await response.json();
-  displayTracks(allTracks);
+http://localhost:3000/tracks`);
+  Tracks = await response.json();
+  displayTracks(Tracks);
 }
 
 // Function to display artists
