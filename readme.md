@@ -1,5 +1,7 @@
 MusicBase
 
+skriv npm start, for at køre appen
+
 MusicBase er en webbaseret applikation der viser kunstnere, kan følgende være API-routes og tilhørende funktioner:
 
 Routes
