@@ -12,21 +12,21 @@ async function start() {
 
 async function Getartists() {
   const response = await fetch(`
-https://musicbaseee.azurewebsites.net/artists`);
+https://localhost:3000/artists`);
   artists = await response.json();
   displayartists(artists);
 }
 
 async function GetAlbums() {
   const response = await fetch(`
-https://musicbaseee.azurewebsites.net/albums`);
+https://localhost:3000/albums`);
   allAlbums = await response.json();
   displayAlbums(allAlbums);
 }
 
 async function GetTracks() {
   const response = await fetch(`
-https://musicbaseee.azurewebsites.net/tracks`);
+https://localhost:3000/tracks`);
   allTracks = await response.json();
   displayTracks(allTracks);
 }
